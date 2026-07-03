@@ -1,0 +1,18 @@
+<!-- Remix Icon: seedling-line (Customized for Web Layout) -->
+<svg 
+  xmlns="http://w3.org" 
+  viewBox="0 0 24 24" 
+  width="24" 
+  height="24" 
+  fill="none" 
+  stroke="currentColor" 
+  stroke-width="1.5" 
+  stroke-linecap="round" 
+  stroke-linejoin="round"
+>
+  <!-- Accent rays added above the leaves -->
+  <path d="M12 2v2M8.5 3.5l1 1M15.5 3.5l-1 1" />
+  
+  <!-- Central organic plant sprout structure -->
+  <path d="M12 22V9M12 11c0 0 .5-5 4.5-5s4 4 4 4c0 0-4 0-8.5 1M12 11c0 0-.5-4.5-4.5-4.5S4 10 4 10c0 0 4 0 8.5 1" />
+</svg>
