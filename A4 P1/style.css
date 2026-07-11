@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #F4F3EF;
+    display: grid;
+    border-radius: 35px;
+    grid-template-columns: 38% 28% 18% 16%;
+    grid-template-rows: 22% 48% 30%;
+
+    grid-template-areas:
+        "left right-top right-top right-top"
+        "left right-center-1 right-center-1 right-center-2"
+        "left right-bottom-1 right-bottom-2 right-bottom-2";
+
+
+}
+
+.left {
+    grid-area: left;
+}
+
+.l1{
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.l1 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;        
+    align-items: center;
+}
+
+.l1 li{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+.l2 {
+    border: 2px solid black;
+    background: #8585D8;
+    height: 90%;
+    width: 70%;
+    position: relative;
+    top: 60px;
+    left: 130px;
+    border-radius: 35px;
+}
+.info{
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 30px;
+
+}
+.info img{
+      height: 26px;
+      width: 26px;
+      position: relative;
+      top: 6px;
+}
+.info h1{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    color: #F4F3EF;
+}
+
+.profile img{
+      height: 490px;
+      width: 430px;
+      position: absolute;
+      top: 70px;
+      left: 130px;
+      z-index: 3;
+}
+.circle1{
+    background-color: #F3C8D3;
+     height: 350px;
+      width: 350px;
+      border-radius: 100%;
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      z-index: 2;
+}
+.circle2{
+     border: 10px solid white;
+     height: 450px;
+      width: 480px;
+      border-radius: 100%;
+      position: absolute;
+      top: 110px;
+      left: 90px;
+
+}
+.name{
+    position: relative;
+    top: 550px;
+    left: 40px;
+}
+.N1 h1{
+      font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 80px;
+  color: #F4F3EF;
+}
+.N2 h1{
+     font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #F4F3EF;
+  font-size: 80px;
+}
+.N3 h1{
+     font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #F4F3EF;
+  font-size: 80px;
+}
+.cd img{
+    height: auto;
+    width: 300px;
+    position: relative;
+    top: 400px;
+    left: 350px;
+}
+.email{
+     text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #F4F3EF;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+.email h3{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    color: #F4F3EF;
+    letter-spacing: 1px;
+    position: relative;
+    top: 350px;
+    left: 40px;
+}
+.email img{
+    height: auto;
+    width: 30px;
+    position: relative;
+    top: 320px;
+    left: 310px;
+}
+.right-top {
+    
+    grid-area: right-top;
+
+}
+.right-top h1{
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 270px;
+  position: relative;
+  bottom: 40px;
+  left: 20px;
+}
+.card-corner{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 5;
+}
+.cc1{
+    width: 25px;
+    height: 20px;
+    right: 250px;
+}
+.cc2{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    right: 200px;
+    top: 60px;
+    
+}
+.cc3{
+    width: 25px;
+    height: 20px;
+    right: 30px;
+    top: 20px;
+}
+
+.right-center-1 {
+    grid-area: right-center-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.flamingo{
+    height:440px;
+    width:850px;
+    border-radius:35px;
+    position:relative;
+    left:-65px;
+}
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    width: 78px;
+    height: 78px;
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-btn img{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 6px;
+    top: 2px;
+}
+.corner{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:14px;
+    height:14px;
+    border-top:2px solid rgba(255,255,255,.8);
+    border-right:2px solid rgba(255,255,255,.8);
+    border-top-right-radius:3px;
+}
+
+.right-center-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: right-center-2;
+}
+
+.upper {
+    background-color: #BDE5E7;
+    height: 200px;
+    width: 200px;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 150px;
+    padding: 110px;
+    border-top-left-radius: 35px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 0;
+}
+
+.upper h1 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+}
+
+.upper h2 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+}
+.cc11{
+    left: 170px;
+}
+.lower {
+    background-color: #9C7AD9;
+    height: 200px;
+    width: 200px;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 150px;
+    padding: 110px;
+    border-top-left-radius: 0px;
+  border-bottom-left-radius: 35px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 35px;
+}
+
+.lower h1 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    color: #F4F3EF;
+}
+
+.lower h2 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    color: #F4F3EF;
+}
+
+.right-bottom-1 {
+    background-color: #626262;
+    border-radius: 35px;
+    height: 270px;
+    width: 360px;
+    position: relative;
+    left: 6%;
+    top: 10%;
+    grid-area: right-bottom-1;
+}
+
+.apple-logo{
+    display:flex;
+    justify-self:center;
+    width:350px;
+    height:auto;
+    position:relative;
+    top:2px;
+    left:10px;
+}
+
+.right-bottom-1 h2 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    color: #F4F3EF;
+    position: relative;
+    bottom: 80px;
+    left: 135px;
+}
+
+.right-bottom-2 {
+    grid-area: right-bottom-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 100px;
+}
+
+.s1 {
+    background-color: black;
+    height: 270px;
+    width: 360px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.s1 img {
+    width: 150px;
+    position: relative;
+    right: 60px;
+}
+
+.s2 {
+    background-color: #F7C46A;
+    height: 270px;
+    width: 360px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 90px;
+}
+
+.s2 h1 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+}
+
+.s2 h2 {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+}
+.cc111{
+    right: 30px;
+}
