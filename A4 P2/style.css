@@ -14,7 +14,7 @@ main {
     height: 100%;
     width: 100%;
     background-color: #171717;
-    /* border: 10px solid black; */
+    border: 10px solid black;
      padding:18px;
      gap:16px;
     display: grid;
@@ -37,13 +37,13 @@ main {
    padding: 24px 28px;
    display: flex;
     flex-direction: column;
-    /* width: 100%;
-    height: 100%; */
+    width: 540px;
+    height: 170px;
 }
 
 .profile img {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     position: relative;
     left: 10px;
@@ -52,8 +52,8 @@ main {
 
 .profile2 {
     position: relative;
-    left: 90px;
-    bottom: 65px;
+    left: 50px;
+    bottom: 45px;
 }
 
 .profile2 h1 {
@@ -62,7 +62,7 @@ main {
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 24px;
+    font-size: 15px;
 }
 
 .profile2 h2 {
@@ -71,7 +71,7 @@ main {
     font-weight: 300;
     font-style: normal;
     color: #727272;
-    font-size: 18px;
+    font-size: 11px;
 }
 
 .detail {
@@ -86,9 +86,9 @@ main {
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 31px;
+    font-size: 16px;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
     right: 40px;
 }
 
@@ -98,7 +98,7 @@ main {
     font-weight: 400;
     font-style: normal;
     color: #727272;
-    font-size: 13px;
+    font-size: 10px;
     position: relative;
     right: 40px;
     bottom: 50px;
@@ -112,12 +112,14 @@ main {
     border-radius: 28px;
     overflow: hidden;
     padding: 10px;
+     position: relative;
+    left: 90px;
 }
 
 .top-center-1 img {
-    border: 8px solid black;
+    border: 10px solid black;
      width:100%;
-    height:100%;
+    height:120%;
     object-fit: cover;
     border-radius: 24px;
     display: block;
@@ -131,16 +133,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 28px;
+    position: relative;
+    left: 100px;
 }
 
 .top-center-2 img {
-     border: 8px solid black;
+     border: 10px solid black;
      width:100%;
-    height:100%;
+    height:160%;
     object-fit: cover;
     border-radius: 24px;
     display: block;
+    
 }
 
 .top-right {
@@ -160,8 +165,8 @@ main {
     justify-content: space-between;
     gap: 16px;
     position: relative;
-    top: -10px;
-    left: 90px;
+    top: 10px;
+    left: 80px;
 }
 
 .lower {
@@ -169,15 +174,15 @@ main {
     justify-content: space-between;
     gap: 16px;
     position: relative;
-    top: -10px;
-    right: -90px;
+    top: 5px;
+    right: -80px;
 }
 
 .social {
     border: 8px solid black;
     border-radius: 20px;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
 }
 
@@ -189,8 +194,8 @@ main {
 }
 
 .left img {
-    height: 490px;
-    width: 350px;
+    height: 300px;
+    width: 250px;
     border-radius: 40px;
     position: relative;
     left: 3px;
@@ -199,14 +204,15 @@ main {
 }
 
 .right {
-    height: 490px;
-    width: 200px;
+    height: 300px;
+    width: 230px;
     border-radius: 40px;
     border: 8px solid black;
     flex: 1 ;
     padding:20px;
     position: relative;
-    top: 20px;
+    top: 25px;
+    left: 25px;
 }
 
 .info {
@@ -215,7 +221,7 @@ main {
     gap: 30px;
     position: relative;
     top: 40px;
-    left: 20px;
+    left: -5px;
 }
 
 .info h2 {
@@ -224,8 +230,8 @@ main {
     font-weight: 400;
     font-style: normal;
     color: #727272;
-    font-size: 15px;
-    word-spacing: 10px;
+    font-size: 10px;
+    word-spacing: 8 px;
 }
 
 .info h1 {
@@ -234,7 +240,7 @@ main {
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 31px;
+    font-size: 18px;
     position: relative;
     bottom: 20px;
     word-spacing: 1px;
@@ -242,8 +248,8 @@ main {
 
 .up {
     position: relative;
-    top: 70px;
-    left: -10px;
+    top: 60px;
+    left: -20px;
     display:flex;
 
     justify-content:space-between;
@@ -253,8 +259,8 @@ main {
 
 .down {
     position: relative;
-    top: 75px;
-    left: -10px;
+    top: 20px;
+    left: -20px;
      display:flex;
 
     justify-content:space-between;
@@ -262,12 +268,13 @@ main {
 
 .stack {
     border: 4px solid black;
-    border-radius: 20px;
-    height: 60px;
-    width: 60px;
+    border-radius: 15px;
+    height: 40px;
+    width: 40px;
     padding: 10px;
-    margin: 20px;
+    margin: 15px;
 }
+
 
 .center-center {
     grid-area: center-center;
@@ -278,9 +285,9 @@ main {
     height:100%;
     border-radius: 40px;
     border: 8px solid black;
-    /* position: relative;
-    top: 10%;
-    left: 30%; */
+    position: relative;
+    top: -2.5%;
+    left: 13%;
 }
 
 .center-right {
@@ -295,31 +302,30 @@ main {
 
 .u {
     flex: 1;
-    background: #171717;
     border-radius: 40px;
     padding: 22px;
     position: relative;
-    width: 300px;
+    width: 230px;
     border: 10px solid black;
 }
 
 .center-right .info {
     position: relative;
-    top: 20px;
-    left: 30px;
+    top: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
 
 .center-right .info h2 {
-    font-size: 16px;
+    font-size: 10px;
     color: #727272;
     font-weight: 400;
 }
 
 .center-right .info h1 {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.35;
     width: 170px;
     color: #f2f2f2;
@@ -332,7 +338,7 @@ main {
 
     right: 22px;
 
-    bottom: 22px;
+    bottom: 12px;
 }
 
 .arrow img {
@@ -344,14 +350,13 @@ main {
 }
 
 .d {
-    height: 120px;
-
-    background: #171717;
-
+    height: 190px;
     border-radius: 30px;
-    border: 10px solid black;
+    border: 8px solid black;
     display: flex;
-
+   position: relative;
+   bottom: 20px;
+   left: 10px;
     justify-content: center;
 
     align-items: center;
@@ -397,9 +402,10 @@ main {
     align-items: center;
     gap: 50px;
       padding:28px;
-
+    position: relative;
+    bottom: 10px;
     overflow:hidden;
-    height: 260px;
+    height: 170px;
     width: 110%;
     
 }
@@ -407,12 +413,12 @@ main {
 .text {
     position: relative;
     left: 90px;
-    top: 70px;
+    top: 50px;
     width:58%;
 }
 
 .bottom-left .d1{
-    font-size:30px;
+    font-size:20px;
 
     line-height:1.3;
 
@@ -428,7 +434,7 @@ main {
 
     color:#777;
 
-    font-size:14px;
+    font-size:10px;
 
     line-height:1.8;
 }
@@ -445,7 +451,7 @@ main {
 }
 
 .framer img{
-    width:100%;
+    width:60%;
 
     max-width:220px;
 
@@ -456,20 +462,22 @@ main {
 .bottom-right{
     grid-area:bottom-right;
     border:8px solid black;
-    border-radius:28px;
+    border-radius:40px;
     padding: 38px;
-    width: 900px;
-    height: 250px;
+    width: 700px;
+    height: 169px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     position: relative;
-    left: 150px;
+    left: 65px;
+    bottom: 10px;
 }
 
 .info2{
-    position:static;
-
+    position:relative;
+    top: -10px;
+    left: 20px;
     margin-bottom:18px;
 }
 
@@ -477,7 +485,7 @@ main {
 
     color:#7D7D7D;
 
-    font-size:15px;
+    font-size:10px;
 
     font-weight:400;
 }
@@ -485,14 +493,14 @@ main {
 .text2{
 
     position:relative;
-    top: 60px;
-    left: 40px;
+    top: 50px;
+    left: 60px;
     width:80%;
 }
 
 .bottom-right .d1{
 
-    font-size:42px;
+    font-size:18px;
 
     font-weight:700;
 
@@ -510,7 +518,7 @@ main {
 
     color:#777;
 
-    font-size:15px;
+    font-size:10px;
 
     line-height:1.8;
 }
