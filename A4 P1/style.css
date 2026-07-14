@@ -24,7 +24,7 @@ main {
         "left right-center-1 right-center-1 right-center-2"
         "left right-bottom-1 right-bottom-2 right-bottom-2";
 
-
+  border: 2px solid black;
 }
 
 .left {
@@ -56,25 +56,24 @@ main {
 }
 
 .l2 {
-    border: 2px solid black;
     background: #8585D8;
     height: 90%;
     width: 70%;
     position: relative;
-    top: 60px;
+    top: 10px;
     left: 130px;
     border-radius: 35px;
 }
 .info{
     display: flex;
     position: relative;
-    top: 30px;
+    top: 18px;
     left: 30px;
 
 }
 .info img{
-      height: 26px;
-      width: 26px;
+      height: 16px;
+      width: 16px;
       position: relative;
       top: 6px;
 }
@@ -83,41 +82,41 @@ main {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 30px;
+    font-size: 21px;
     color: #F4F3EF;
 }
 
 .profile img{
-      height: 490px;
-      width: 430px;
+      height: 270px;
+      width: 250px;
       position: absolute;
-      top: 70px;
+      top: 50px;
       left: 130px;
       z-index: 3;
 }
 .circle1{
     background-color: #F3C8D3;
-     height: 350px;
-      width: 350px;
+     height: 200px;
+      width: 200px;
       border-radius: 100%;
       position: absolute;
-      top: 150px;
-      left: 150px;
+      top: 95px;
+      left: 145px;
       z-index: 2;
 }
 .circle2{
      border: 10px solid white;
-     height: 450px;
-      width: 480px;
+     height: 250px;
+      width: 250px;
       border-radius: 100%;
       position: absolute;
-      top: 110px;
-      left: 90px;
+      top: 70px;
+      left: 120px;
 
 }
 .name{
     position: relative;
-    top: 550px;
+    top: 300px;
     left: 40px;
 }
 .N1 h1{
@@ -125,7 +124,7 @@ main {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 80px;
+  font-size: 50px;
   color: #F4F3EF;
 }
 .N2 h1{
@@ -134,7 +133,7 @@ main {
   font-weight: 700;
   font-style: normal;
   color: #F4F3EF;
-  font-size: 80px;
+  font-size: 50px;
 }
 .N3 h1{
      font-family: "Outfit", sans-serif;
@@ -142,14 +141,14 @@ main {
   font-weight: 700;
   font-style: normal;
   color: #F4F3EF;
-  font-size: 80px;
+  font-size: 50px;
 }
 .cd img{
     height: auto;
-    width: 300px;
+    width: 200px;
     position: relative;
-    top: 400px;
-    left: 350px;
+    top: 250px;
+    left: 220px;
 }
 .email{
      text-decoration-line: underline;
@@ -163,19 +162,19 @@ main {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: 25px;
+    font-size: 15px;
     color: #F4F3EF;
     letter-spacing: 1px;
     position: relative;
-    top: 350px;
+    top: 200px;
     left: 40px;
 }
 .email img{
     height: auto;
-    width: 30px;
+    width: 20px;
     position: relative;
-    top: 320px;
-    left: 310px;
+    top: 182px;
+    left: 210px;
 }
 .right-top {
     
@@ -187,9 +186,9 @@ main {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-size: 270px;
+  font-size: 150px;
   position: relative;
-  bottom: 40px;
+  bottom: 30px;
   left: 20px;
 }
 .card-corner{
@@ -206,21 +205,8 @@ main {
 .cc1{
     width: 25px;
     height: 20px;
-    right: 250px;
-}
-.cc2{
-    width: 50px;
-    height: 20px;
-    position: absolute;
-    right: 200px;
-    top: 60px;
-    
-}
-.cc3{
-    width: 25px;
-    height: 20px;
-    right: 30px;
-    top: 20px;
+    right: 230px;
+    top: 10px;
 }
 
 .right-center-1 {
@@ -228,20 +214,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */
+    /* overflow: hidden; */
+    object-fit: contain;
+    
 }
 .flamingo{
-    height:440px;
-    width:850px;
-    border-radius:35px;
+    height:320px;
+    width:560px;
+    border-radius: 35px;
     position:relative;
-    left:-65px;
+    right: 40px;
+    top:-10px ;
 }
 .play-btn{
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 44%;
+    left: 57%;
     transform: translate(-50%,-50%);
     width: 78px;
     height: 78px;
@@ -258,18 +247,26 @@ main {
     width: 24px;
     height: 24px;
     position: relative;
-    left: 6px;
+    left: 4px;
     top: 2px;
 }
-.corner{
+/* .corner{
     position:absolute;
     top:18px;
-    right:18px;
+    right:78px;
     width:14px;
     height:14px;
     border-top:2px solid rgba(255,255,255,.8);
     border-right:2px solid rgba(255,255,255,.8);
     border-top-right-radius:3px;
+} */
+.cc2{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 390px;
+    top: 180px;
+    
 }
 
 .right-center-2 {
@@ -282,14 +279,15 @@ main {
 
 .upper {
     background-color: #BDE5E7;
-    height: 200px;
-    width: 200px;
+    height: 10px;
+    width: 50px;
      display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 150px;
+     right: -1px;
+     top: -10px;
     padding: 110px;
     border-top-left-radius: 35px;
   border-bottom-left-radius: 0px;
@@ -314,17 +312,19 @@ main {
 }
 .cc11{
     left: 170px;
+    top: 30px;
 }
 .lower {
     background-color: #9C7AD9;
-    height: 200px;
-    width: 200px;
+    height:10% ;
+    width:10% ;
      display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 150px;
+   right: -1px;
+    top: -10px;
     padding: 110px;
     border-top-left-radius: 0px;
   border-bottom-left-radius: 35px;
@@ -353,22 +353,22 @@ main {
 .right-bottom-1 {
     background-color: #626262;
     border-radius: 35px;
-    height: 270px;
-    width: 360px;
+    height: 180px;
+    width: 185px;
     position: relative;
     left: 6%;
-    top: 10%;
+    top: 7%;
     grid-area: right-bottom-1;
 }
 
 .apple-logo{
     display:flex;
     justify-self:center;
-    width:350px;
+    width:190px;
     height:auto;
     position:relative;
-    top:2px;
-    left:10px;
+    top:9px;
+    left:5px;
 }
 
 .right-bottom-1 h2 {
@@ -379,10 +379,15 @@ main {
     font-size: 30px;
     color: #F4F3EF;
     position: relative;
-    bottom: 80px;
-    left: 135px;
+    bottom: 40px;
+    left: 50px;
 }
-
+.cc3{
+    width: 16px;
+    height: 17px;
+    right: 26px;
+    top: 28px;
+}
 .right-bottom-2 {
     grid-area: right-bottom-2;
     display: flex;
@@ -394,7 +399,7 @@ main {
 
 .s1 {
     background-color: black;
-    height: 270px;
+    height: 185px;
     width: 360px;
     border-radius: 35px;
     display: flex;
@@ -405,22 +410,22 @@ main {
 }
 
 .s1 img {
-    width: 150px;
+    width: 90px;
     position: relative;
     right: 60px;
 }
 
 .s2 {
     background-color: #F7C46A;
-    height: 270px;
-    width: 360px;
+     height: 185px;
+    width: 300px;
     border-radius: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    right: 90px;
+    right: 140px;
 }
 
 .s2 h1 {
@@ -428,7 +433,7 @@ main {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 75px;
+    font-size: 48px;
 }
 
 .s2 h2 {
@@ -436,8 +441,10 @@ main {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
 }
 .cc111{
-    right: 30px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
 }
