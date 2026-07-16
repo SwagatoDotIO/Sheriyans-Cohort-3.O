@@ -2,18 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px soilc red;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
+    /* overflow: hidden; */
 }
 
 
 body {
-    background: linear-gradient(to right, #F8F4EE 50%,
-            #8F2623 50%);
+    background: linear-gradient(to right, #F8F4EE 50%,#8F2623 50%);
+    background-repeat: repeat-y;
+    background-size:100% 100vh;
+}
+
+main{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 nav {
@@ -81,8 +90,8 @@ nav {
 
 .classy {
     position: absolute;
-    left: 48px;
-    top: 460px;
+    left: 65px;
+    top: 500px;
 }
 
 .classy h1 {
@@ -97,8 +106,8 @@ nav {
 
 .info2 {
     position: absolute;
-    left: 200px;
-    top: 110px;
+    left: 290px;
+    top: 160px;
 }
 
 .info2 ul {
@@ -130,8 +139,8 @@ nav {
 
 .beetle img {
     position: relative;
-    bottom: 150px;
-    left: 70px;
+    bottom: 100px;
+    left: 74px;
     width: 90%;
     height: 90%;
 }
@@ -143,8 +152,8 @@ nav {
     font-style: normal;
     font-size: 60px;
     position: relative;
-    bottom: 773px;
-    left: 950px;
+    bottom: 823px;
+    left: 1110px;
     color: #D9D9D9;
 }
 
@@ -154,7 +163,7 @@ nav {
     gap: 45px;
     position: relative;
     bottom: 720px;
-    left: 880px;
+    left: 1035px;
 }
 
 
@@ -243,8 +252,8 @@ nav {
 
 .control {
     position: absolute;
-    top: 520px;
-    right: 165px;
+    top: 620px;
+    right: 155px;
 }
 
 .price h1 {
