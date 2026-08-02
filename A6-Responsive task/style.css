@@ -1,0 +1,965 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: reckless;
+    src: url(reckless-font-family/RecklessCollectionVF-TRIAL.ttf);
+}
+
+:root {
+    --ff1: reckless;
+    --ff2: Figtree;
+    --ff3: Roboto Mono;
+    --ff4: Geist Mono;
+}
+
+header {
+    background-image: url(website_background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 90vh;
+    width: 100vw;
+    border-bottom: 1px solid black;
+}
+
+nav {
+    background-color: white;
+    width: 93vw;
+    height: 8vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    left: 4%;
+    top: 3%;
+    z-index: 100;
+    transition: all ease .3s;
+    animation-name: navbar;
+}
+
+@keyframes navbar {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+       transform: translateY(100);
+    }
+}
+
+/* Shop learn review  */
+
+.text {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 18px;
+    left: 16px;
+    cursor: pointer;
+}
+
+.text img {
+    height: 17px;
+    width: 17px;
+    background-color: #C0DBFF;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+    right: 15px;
+    top: 2px;
+}
+
+.text li {
+    font-family: var(--ff1);
+    font-size: 20px;
+}
+
+#cool {
+    border: none;
+    background: none;
+    height: 20px;
+}
+
+/* logo nav */
+
+.logo img {
+    height: 45px;
+    width: 110px;
+    position: relative;
+    left: 650px;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+/* text2 */
+
+.text2 {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 1000px;
+    bottom: 50px;
+}
+
+.text2 li {
+    font-family: var(--ff3);
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+}
+
+.text2 img {
+    position: relative;
+    bottom: 7px;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+}
+
+.text2 img:hover {
+    transform: scale(0.75);
+}
+
+#cool1 {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #ffb500;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-family: var(--ff3);
+    position: relative;
+    right: 30px;
+    text-align: center;
+}
+
+.text2 li::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    right: 70px;
+    top: 21px;
+    transition: all ease 0.3s;
+    transform: translateX(100%);
+}
+
+.text2 li:hover::after {
+    width: 100%;
+}
+
+#cool2::after {
+    position: absolute;
+    right: 180px;
+}
+
+/* #cool3::after{
+    position: absolute;
+    right: 250px;
+}  override */
+#cool4::after {
+    display: none;
+}
+
+#cool1::after {
+    display: none;
+}
+
+/* right chevron */
+.right img {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 94%;
+    top: 40%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 70%;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.right img:hover {
+    background-color: #2A2857;
+}
+
+/* info */
+
+.info {
+    position: relative;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.info h1 {
+    font-family: var(--ff1);
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.info p {
+    font-family: var(--ff2);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* button */
+.blue {
+    width: 10%;
+    height: 50px;
+    border-radius: 50px;
+    padding: 12px;
+    font-family: var(--ff2);
+    font-size: 18px;
+    background-color: #2A2857;
+    transition: all ease 0.4s;
+    cursor: pointer;
+    color: white;
+}
+
+.blue:hover {
+    background-color: white;
+    color: black;
+}
+
+/* down arrow */
+
+.down img {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 94%;
+    top: 89%;
+    background-color: #2A2857;
+    border: 1px solid black;
+    border-radius: 70%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* access */
+
+.access img{
+     height: 50px;
+    width: 50px;
+    padding: 8px;
+    position: fixed;
+    left: 2%;
+    top: 89%;
+    background-color: #60C6A6;
+    border-radius: 70%;
+    cursor: pointer;
+    z-index: 3;
+    transition: all ease .4s;
+}
+
+.access img:hover{
+    transform: scale(1.2);
+}
+
+/* Main */
+
+main{
+   width: 100%;
+   height: 500%;
+   background-color: #FBF9EB;
+}
+/* Main text */
+.subject{
+    text-align: center;
+    padding: 100px;
+    /* position: relative;
+    top: 50%; */
+}
+
+.subject p{
+    font-family: var(--ff1);
+    font-size: 63.4682px;
+    font-weight: 300;
+}
+
+/* heading */
+.heading{
+    text-align: center;
+    width: 20%;
+    position: relative;
+    left: 40%;
+    transform: rotate(-2deg);
+}
+
+.heading button{
+    font-family: var(--ff4);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    word-spacing: -10px;
+      border: 1px solid black;
+    background-color: #DAAEEA;
+    padding-right: 4px;
+     border-radius: 5px;
+}
+
+/* products */
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.name{
+   position: relative;
+   top: 100px;
+   right: 110px;
+}
+
+.name span button{
+   font-family: var(--ff4);
+   font-size: 22px;
+   font-weight: 600;
+   background-color: white;
+   word-spacing: -10px;
+   border-radius: 5px;
+    border: 1px solid black;
+    padding: 0 4px;
+}
+
+
+.rating{
+    display: flex;
+    gap: 5px;
+    position: relative;
+    top: 50px;
+    left: 130px;
+}
+
+.rating img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+
+}
+
+.rate{
+  font-family: var(--ff2);
+}
+
+.image{
+   background-color: #C1EE91;
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+     border-radius:15px;
+}
+
+.image img{
+    height: 350px;
+    width: 350px;
+}
+
+.add{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border: 1px solid black;
+   border-radius: 10px;
+   padding: 3px 10px;
+   position: relative;
+   bottom: 90px;
+   left: 150px;
+}
+.plus{
+  height: 18px;
+  width: 18px;
+}
+.Addy{
+  font-family: var(--ff2);
+  font-weight: 400;
+}
+
+.title{
+    position: relative;
+    right: 50px;
+    bottom: 50px;
+}
+
+.title h2{
+ font-family: var(--ff1);
+ font-size: 26px;
+ font-weight: 400;
+}
+
+.title2{
+  position: relative;
+    right: -10px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.price{
+  font-family: var(--ff2);
+  font-size: 14px;
+  font-weight: 500;
+}
+.info2{
+  font-family: var(--ff2);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* card 2 */
+.card2{
+    position: relative;
+    top: 13px;
+}
+.card2 .name span button{
+    position: relative;
+    right: 30px;
+}
+.card2 .rating{
+    position: relative;
+    left: 150px;
+}
+.card2 .image{
+    background-color: #C8E892;
+}
+.card2 .image img{
+    position: relative;
+    left: 40px;
+}
+.card2 .title{
+    position: relative;
+    right: 40px;
+    bottom: 50px;
+}
+
+.card2 .title p{
+ font-family: var(--ff1);
+ font-size: 26px;
+ font-weight: 400;
+}
+
+/* card 3 */
+.card3{
+  position: relative;
+  top: 14px;
+}
+.card3 .name span button{
+  position: relative;
+  left: 10px;
+}
+.card3 .rating{
+   position: relative;
+   left: 150px;
+}
+.card3 .image{
+   background-color: #B0E8C1;
+  
+}
+.card3 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card3 .title{
+    position: relative;
+    right: 80px;
+    bottom: 50px;
+}
+.card3 .title p{
+ font-family: var(--ff1);
+ font-size: 26px;
+ font-weight: 400;
+}
+
+/* card4 */
+.card4{
+  position: relative;
+  top: 14px;
+}
+.card4 .name span button{
+  position: relative;
+  left: 10px;
+}
+.card4 .rating{
+   position: relative;
+   left: 150px;
+}
+.card4 .image{
+   background-color: #CCE3FF;
+  
+}
+.card4 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card4 .title{
+    position: relative;
+    right: 80px;
+    bottom: 50px;
+}
+.card4 .title p{
+ font-family: var(--ff1);
+ font-size: 26px;
+ font-weight: 400;
+}
+
+/* card 5 */
+.card5{
+  position: relative;
+  top: -14px;
+}
+.card5 .name span button{
+  position: relative;
+  left: 14px;
+}
+.card5 .rating{
+   position: relative;
+   left: 150px;
+}
+.card5 .image{
+   background-color: #FFD884;
+  
+}
+.card5 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card5 .title{
+    position: relative;
+    right: 100px;
+    bottom: 50px;
+}
+.card5 .title h2{
+ font-family: var(--ff1);
+ font-size: 29px;
+ font-weight: 400;
+}
+
+.card5 .title2{
+  position: relative;
+  right: 100px;
+}
+
+/* card 6 */
+.card6{
+  position: relative;
+  top: -14px;
+}
+.card6 .name span button{
+  position: relative;
+  left: 14px;
+}
+.card6 .rating{
+   position: relative;
+   left: 150px;
+}
+.card6 .image{
+   background-color: #C1E4F8;
+  
+}
+.card6 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card6 .title{
+    position: relative;
+    right: 40px;
+    bottom: 50px;
+}
+.card6 .title h2{
+ font-family: var(--ff1);
+ font-size: 29px;
+ font-weight: 400;
+}
+
+/* card7 */
+.card7{
+  position: relative;
+  top: 34px;
+}
+.card7 .name span button{
+  position: relative;
+  left: -10px;
+}
+.card7 .rating{
+   position: relative;
+   left: 150px;
+}
+.card7 .image{
+   background-color: #C0E571;
+  
+}
+.card7 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card7 .title{
+    position: relative;
+    right: 50px;
+    bottom: 50px;
+}
+
+/* card 8 */
+.card8{
+  position: relative;
+  top: -14px;
+}
+.card8 .name span button{
+  position: relative;
+  left: -10px;
+}
+.card8  .rating{
+   position: relative;
+   left: 150px;
+}
+.card8 .image{
+   background-color: #FFCB96;
+  
+}
+.card8 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card8 .title{
+    position: relative;
+    right: 70px;
+    bottom: 50px;
+}
+
+
+/* card9 */
+.card9{
+  position: relative;
+  top: -14px;
+}
+.card9 .name span button{
+  position: relative;
+  left: -8px;
+}
+.card9 .rating{
+   position: relative;
+   left: 130px;
+}
+.card9 .image{
+   background-color: #FFD1B8;
+  
+}
+.card9 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card9 .title{
+    position: relative;
+    right: 1px;
+    bottom: 50px;
+}
+.card9 .title h2{
+ font-family: var(--ff1);
+ font-size: 28px;
+ font-weight: 400;
+}
+
+
+/* card10 */
+.card10{
+  position: relative;
+  top: -14px;
+}
+.card10 .name span button{
+  position: relative;
+  left: 14px;
+}
+.card10 .rating{
+   position: relative;
+   left: 150px;
+}
+.card10 .image{
+   background-color: #AEE0F9;
+  
+}
+.card10 .image img{
+  height: 300px;
+  width: 300px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+.card10 .title{
+    position: relative;
+    right: 50px;
+    bottom: 50px;
+}
+.card10 .title p{
+ font-family: var(--ff1);
+ font-size: 29px;
+ font-weight: 400;
+}
+
+.card10 .title2{
+  position: relative;
+  right: -20px;
+}
+
+/* line */
+
+.lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    top: 20px;
+}
+.line{
+    width: 4%;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#Line{
+    background-color: #2A2857;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    padding: 60px;
+    
+}
+.btn p{
+    font-size: 15px;
+}
+
+.bigline{
+    border: 1px solid black;
+    width: 100%;
+    height: 1px;
+    position: relative;
+    top: 230px;
+}
+
+
+.discover button{
+    background-color: #FF7F31;
+    position: relative;
+    top: 410px;
+    right: 490px;
+    padding-left: 3px;
+}
+
+#cool5{
+   position: relative;
+   top: 350px;
+    right: 205px;
+}
+#cool5 p{
+    font-size: 50px;
+}
+
+.input{
+    position: relative;
+    top: 350px;
+    left: 200px;
+}
+.input input{
+    height: 90px;
+    width: 400px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: var(--ff1);
+    font-size: 30px;
+    border: 1px solid black;
+}
+
+.smallline{
+    position: relative;
+    top: 500px;
+    left: 210px;
+}
+.smallline p{
+    font-family: var(--ff2);
+    font-size: 15px;
+}
+
+
+.btn2{
+    position: relative;
+    top: 550px;
+    left: 200px;
+}
+
+.btn2 ul{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+}
+
+.btn2 ul li button{
+    background-color: #DAEAFF;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius:10px ;
+    font-family: var(--ff1);
+    font-size: 30px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+
+/* forest */
+.forest{
+    background-image: url(forest.webp);
+    position: relative;
+    top: 20%;
+    height: 90%;
+    background-repeat: no-repeat;
+}
+
+.Origins button{
+    background-color: #A2C9FC;
+    position: relative;
+    top: 210px;
+    right: 10px;
+    padding-left: 3px;
+}
+
+.colorado p{
+   font-family: var(--ff4);
+   font-size: 200px;
+   font-weight: 700;
+   color: white;
+   position: relative;
+   left:350px ;
+   top: 400px;
+   letter-spacing: -3px;
+   word-spacing: 100px;
+}
+
+#cool6{
+    color: white;
+    font-size: 60px;
+    position: relative;
+    top: 600px;
+    z-index: 20;
+}
+
+/* circles */
+.motion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    top: 700px;
+    right: 15px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.circle img{
+      height: 100px;
+      width: 100px;
+}
+.circle p{
+    color: white;
+    font-family: var(--ff3);
+    font-size: 13px;
+    font-weight: 600;
+}
+.circle span{
+    position: relative;
+    left: 30px;
+}
+
+/* middle circle */
+#cool7{
+    position: relative;
+    bottom: 1px;
+}
+
+#cool7 span{
+   position: relative;
+   left: 42px;
+}
+
+/* last circle */
+#cool8{
+    position: relative;
+   bottom: 4px;
+}
+#cool8 img{
+     height: 97px;
+      width: 97px;
+}
+#cool8 p{
+    position: relative;
+    left: 4px;
+}
+#cool8 span{
+     position: relative;
+    left: 8px;
+}
+
+#cool9{
+    position: relative;
+    top: 700px;
+}
