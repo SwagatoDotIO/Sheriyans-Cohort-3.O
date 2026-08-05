@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,
-body {
+html {
     height: 100%;
     width: 100%;
 }
 body{
-    min-height: 100vh;
+    /* min-height: 100vh; */
+     height: 900%;
     margin: 0;
 
     background:
@@ -56,8 +56,10 @@ nav{
     list-style:none;
     color:#D7D7D7;
     font-family:"Poppins",sans-serif;
-    font-size:20px;
+    font-size:15px;
     font-weight:400;
+    position: relative;
+    right: 150px;
 }
 #i1{
     position: relative;
@@ -85,7 +87,7 @@ nav{
 .bg-text{
     position: absolute;
     left: 200px;
-    bottom: 150px;
+    bottom: 40px;
     font-family: "Poppins", sans-serif;
     font-size: 170px;
     font-weight: 700;
@@ -107,8 +109,13 @@ nav{
     z-index: 3;
     height: 200px;
 }
+.logo2{
+    position: relative;
+    right: 100px;
+    top: 20px;
+}
 .logo2 img{
-    width: 800px;
+    width: 500px;
     height: auto;
     display: block;
     margin-bottom: 8px;
@@ -116,14 +123,14 @@ nav{
 .text{
     width: 420px;
     position: relative;
-    left: 150px;
+    left: -20px;
 }
 
 .text p{
     color: rgba(255,255,255,.78);
 
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.6;
 
@@ -135,24 +142,27 @@ nav{
     margin-top: 18px;
 }
 .o1 img{
-    width: 585px;
+    width: 285px;
     height: auto;
     display: block;
     position: relative;
-    bottom: 270px;
+    bottom: 130px;
+    right: 85px;
+    cursor: pointer;
 }
 .o2 img{
-    width: 785px;
+    width: 389px;
     height: auto;
     display: block;
     position: relative;
-    bottom: 270px;
-    right: 300px;
+    bottom: 130px;
+    right: 230px;
+    cursor: pointer;
 }
 .vertical{
     position: absolute;
 
-    left: 1200px;
+    left: 800px;
     top: 50%;
 
     transform: translateY(-50%) rotate(180deg);
@@ -190,11 +200,11 @@ nav{
     right: 0;
     bottom: 0;
 
-    width: 58%;
+    width: 60%;
     height: calc(100vh - 90px);
     position: relative;
-    bottom: 270px;
-    left: 800px;
+    bottom: 70px;
+    left: 500px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -202,18 +212,18 @@ nav{
     z-index: 2;
 }
 .pic img{
-    width: 1000px;
+    width: 700px;
     height: auto;
 
     display: block;
 
-    object-fit: contain;
+    object-fit: cover;
 }
 .social{
     position: absolute;
 
-    right: 170px;
-    top: 50%;
+    right: 240px;
+    top: 40%;
 
     transform: translateY(-50%);
 
@@ -226,8 +236,8 @@ nav{
     z-index: 5;
 }
 .social img{
-    width: 24px;
-    height: 24px;
+    width: 17px;
+    height: 17px;
 
     display: block;
 
@@ -243,7 +253,7 @@ nav{
 }
 .squid-bg{
     position: absolute;
-    top: 255px;
+    top: 55px;
     right: -70px;
 
     writing-mode: vertical-rl;
@@ -263,7 +273,7 @@ nav{
 footer{
     position:absolute;
     left:50%;
-    bottom:30px;
+    bottom:-100px;
     transform:translateX(-50%);
     z-index:10;
 }
@@ -273,7 +283,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 20px;
     border-radius: 30px;
     background: rgba(255,255,255,.05);
     border: 1px solid rgba(255,255,255,.08);
@@ -284,7 +294,7 @@ footer{
         0 18px 40px rgba(0,0,0,.35);
 }
 .pic2{
-    width: 500px;
+    width: 330px;
     height: 200px;
 
     object-fit: cover;
