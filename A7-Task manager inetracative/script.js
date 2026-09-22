@@ -24,16 +24,10 @@ const completedCount = document.querySelector("#completedCount");
 const pendingCount = document.querySelector("#pendingCount");
 
 
-// ==========================================
-// TASK ID
-// ==========================================
-
 let taskId = 1;
 
 
-// ==========================================
-// ADD TASK
-// ==========================================
+
 
 addTaskBtn.addEventListener("click", function () {
 
@@ -41,9 +35,7 @@ addTaskBtn.addEventListener("click", function () {
     const category = taskCategory.value;
 
 
-    // ======================================
-    // DON'T CREATE EMPTY TASK
-    // ======================================
+    
 
     if (title.trim() === "") {
         alert("Please enter a task");
@@ -51,28 +43,21 @@ addTaskBtn.addEventListener("click", function () {
     }
 
 
-    // ======================================
-    // CREATE TASK CARD
-    // ======================================
+   
 
     const card = document.createElement("div");
 
     card.classList.add("task-card");
 
 
-    // ======================================
-    // ADD DATA ATTRIBUTES
-    // ======================================
+   
 
     card.setAttribute("data-id", taskId);
     card.setAttribute("data-status", "pending");
     card.setAttribute("data-category", category);
 
 
-    // ======================================
-    // CREATE TITLE
-    // ======================================
-
+   
     const heading = document.createElement("h3");
 
     const headingText = document.createTextNode(title);
@@ -80,28 +65,20 @@ addTaskBtn.addEventListener("click", function () {
     heading.appendChild(headingText);
 
 
-    // ======================================
-    // CREATE CATEGORY
-    // ======================================
-
+    
     const categoryText = document.createElement("p");
 
     categoryText.textContent = `Category: ${category}`;
 
 
-    // ======================================
-    // CREATE BUTTON CONTAINER
-    // ======================================
+   
 
     const buttonContainer = document.createElement("div");
 
     buttonContainer.classList.add("task-actions");
 
 
-    // ======================================
-    // CREATE EDIT BUTTON
-    // ======================================
-
+    
     const editBtn = document.createElement("button");
 
     editBtn.classList.add("edit-btn");
@@ -109,9 +86,7 @@ addTaskBtn.addEventListener("click", function () {
     editBtn.textContent = "Edit";
 
 
-    // ======================================
-    // CREATE COMPLETE BUTTON
-    // ======================================
+    
 
     const completeBtn = document.createElement("button");
 
@@ -120,9 +95,7 @@ addTaskBtn.addEventListener("click", function () {
     completeBtn.textContent = "Complete";
 
 
-    // ======================================
-    // CREATE DELETE BUTTON
-    // ======================================
+    
 
     const deleteBtn = document.createElement("button");
 
@@ -131,9 +104,7 @@ addTaskBtn.addEventListener("click", function () {
     deleteBtn.textContent = "Delete";
 
 
-    // ======================================
-    // PUT BUTTONS INSIDE BUTTON CONTAINER
-    // ======================================
+    
 
     buttonContainer.append(
         editBtn,
@@ -142,9 +113,7 @@ addTaskBtn.addEventListener("click", function () {
     );
 
 
-    // ======================================
-    // PUT EVERYTHING INSIDE CARD
-    // ======================================
+    
 
     card.append(
         heading,
@@ -153,42 +122,32 @@ addTaskBtn.addEventListener("click", function () {
     );
 
 
-    // ======================================
-    // DATASET DEMONSTRATION
-    // ======================================
+   
 
     console.log("ID:", card.dataset.id);
     console.log("Status:", card.dataset.status);
     console.log("Category:", card.dataset.category);
 
 
-    // ======================================
-    // ADD CARD TO CONTAINER
-    // ======================================
+   
 
     taskContainer.prepend(card);
 
 
-    // ======================================
-    // CLEAR INPUT
-    // ======================================
+  
 
     taskTitle.value = "";
 
     taskId++;
 
 
-    // ======================================
-    // UPDATE COUNTERS
-    // ======================================
+
 
     updateCounters();
 });
 
 
-// ==========================================
-// EVENT DELEGATION
-// ==========================================
+
 
 taskContainer.addEventListener("click", function (event) {
 
@@ -198,16 +157,13 @@ taskContainer.addEventListener("click", function (event) {
     const card = event.target.closest(".task-card");
 
 
-    // If the click wasn't inside a task card
 
     if (!card) {
         return;
     }
 
 
-    // ======================================
-    // COMPLETE TASK
-    // ======================================
+
 
     if (event.target.classList.contains("complete-btn")) {
 
@@ -224,9 +180,7 @@ taskContainer.addEventListener("click", function (event) {
     }
 
 
-    // ======================================
-    // DELETE TASK
-    // ======================================
+  
 
     if (event.target.classList.contains("delete-btn")) {
 
@@ -236,16 +190,14 @@ taskContainer.addEventListener("click", function (event) {
     }
 
 
-    // ======================================
-    // EDIT TASK
-    // ======================================
+    
 
     if (event.target.classList.contains("edit-btn")) {
 
         const oldHeading = card.querySelector("h3");
 
 
-        // Create input
+        
 
         const editInput = document.createElement("input");
 
@@ -254,16 +206,12 @@ taskContainer.addEventListener("click", function (event) {
         editInput.value = oldHeading.textContent;
 
 
-        // ==================================
-        // REPLACE OLD HEADING
-        // ==================================
+        
 
         oldHeading.replaceWith(editInput);
 
 
-        // ==================================
-        // CREATE SAVE BUTTON
-        // ==================================
+        
 
         const saveBtn = document.createElement("button");
 
@@ -272,16 +220,12 @@ taskContainer.addEventListener("click", function (event) {
         saveBtn.classList.add("save-btn");
 
 
-        // ==================================
-        // INSERT SAVE BUTTON AFTER INPUT
-        // ==================================
+        
 
         editInput.after(saveBtn);
 
 
-        // ==================================
-        // SAVE EDIT
-        // ==================================
+        
 
         saveBtn.addEventListener("click", function () {
 
@@ -290,17 +234,17 @@ taskContainer.addEventListener("click", function (event) {
             newHeading.textContent = editInput.value;
 
 
-            // Replace input with new heading
+            
 
             editInput.replaceWith(newHeading);
 
 
-            // Remove save button
+            
 
             saveBtn.remove();
 
 
-            // Re-apply filters
+            
 
             filterTasks();
         });
@@ -308,9 +252,7 @@ taskContainer.addEventListener("click", function (event) {
 });
 
 
-// ==========================================
-// UPDATE COUNTERS
-// ==========================================
+
 
 function updateCounters() {
 
@@ -341,9 +283,7 @@ function updateCounters() {
 }
 
 
-// ==========================================
-// SEARCH + CATEGORY FILTER
-// ==========================================
+
 
 function filterTasks() {
 
@@ -370,20 +310,20 @@ function filterTasks() {
             card.dataset.category;
 
 
-        // Search condition
+        
 
         const matchesSearch =
             title.includes(searchValue);
 
 
-        // Category condition
+        
 
         const matchesCategory =
             selectedCategory === "all" ||
             cardCategory === selectedCategory;
 
 
-        // Both conditions must be true
+        e
 
         if (matchesSearch && matchesCategory) {
 
@@ -397,9 +337,6 @@ function filterTasks() {
 }
 
 
-// ==========================================
-// SEARCH TASKS
-// ==========================================
 
 searchInput.addEventListener("input", function () {
 
@@ -407,9 +344,7 @@ searchInput.addEventListener("input", function () {
 });
 
 
-// ==========================================
-// CATEGORY FILTER
-// ==========================================
+
 
 categoryFilter.addEventListener("change", function () {
 
@@ -417,9 +352,7 @@ categoryFilter.addEventListener("change", function () {
 });
 
 
-// ==========================================
-// CLEAR ALL TASKS
-// ==========================================
+
 
 clearAllBtn.addEventListener("click", function () {
 
@@ -429,9 +362,7 @@ clearAllBtn.addEventListener("click", function () {
 });
 
 
-// ==========================================
-// ATTRIBUTES VS PROPERTIES
-// ==========================================
+
 
 console.log("Input property value:");
 
@@ -445,32 +376,28 @@ console.log(
 );
 
 
-// ==========================================
-// THEME TOGGLE
-// ==========================================
+
 
 themeBtn.addEventListener("click", function () {
 
 
-    // Get current theme using dataset
+    
 
     const currentTheme =
         document.body.dataset.theme;
 
 
-    // ======================================
-    // LIGHT → DARK
-    // ======================================
+    
 
     if (currentTheme === "light") {
 
 
-        // Change dataset
+       
 
         document.body.dataset.theme = "dark";
 
 
-        // Change data-theme attribute
+        
 
         document.body.setAttribute(
             "data-theme",
@@ -478,30 +405,26 @@ themeBtn.addEventListener("click", function () {
         );
 
 
-        // Add dark class
-
+        
         document.body.classList.add("dark");
 
 
-        // Change button text
 
         themeBtn.textContent = "Light Mode";
     }
 
 
-    // ======================================
-    // DARK → LIGHT
-    // ======================================
+    
 
     else {
 
 
-        // Change dataset
+       
 
         document.body.dataset.theme = "light";
 
 
-        // Change data-theme attribute
+        
 
         document.body.setAttribute(
             "data-theme",
@@ -509,21 +432,19 @@ themeBtn.addEventListener("click", function () {
         );
 
 
-        // Remove dark class
+        
 
         document.body.classList.remove("dark");
 
 
-        // Change button text
+        
 
         themeBtn.textContent = "Dark Mode";
     }
 });
 
 
-// ==========================================
-// PHASE 24 - EVENT PROPAGATION
-// ==========================================
+
 
 const grandparent =
     document.querySelector("#grandparent");
@@ -544,9 +465,7 @@ const capturingResult =
     document.querySelector("#capturingResult");
 
 
-// ==========================================
-// BUBBLING
-// ==========================================
+
 
 let bubblingOrder = [];
 
@@ -580,9 +499,7 @@ grandparent.addEventListener("click", function (event) {
 });
 
 
-// ==========================================
-// CAPTURING
-// ==========================================
+
 
 let capturingOrder = [];
 
