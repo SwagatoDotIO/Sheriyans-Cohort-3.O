@@ -1,0 +1,1270 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   COLOR SYSTEM
+
+   1. Navy  = #17213b
+   2. Cream = #fff8ec
+   3. Coral = #ff6b5e
+========================================= */
+
+:root {
+    --navy: #17213b;
+    --cream: #fff8ec;
+    --coral: #ff6b5e;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    line-height: 1.5;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+
+    width: 100%;
+
+    min-height: 96px;
+
+    padding: 25px 5%;
+
+    background: var(--navy);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand h1 {
+
+    color: white;
+
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    margin-bottom: 5px;
+}
+
+
+.brand p {
+
+    color: var(--cream);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DARK MODE BUTTON
+========================================= */
+
+#themeBtn {
+
+    background: var(--coral);
+
+    color: var(--navy);
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#themeBtn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1296px;
+
+    margin: 0 auto;
+
+    padding-bottom: 80px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    padding: 55px 0 45px;
+}
+
+
+.hero h2 {
+
+    font-size: 44px;
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+}
+
+
+.hero p {
+
+    font-size: 16px;
+
+    color: #17213b;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   COMMON SECTION HEADING
+========================================= */
+
+.section-heading h2,
+.tasks-heading h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+}
+
+
+.section-heading p,
+.tasks-heading p {
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   CREATE TASK
+========================================= */
+
+.task-form {
+
+    background: white;
+
+    border: 1px solid rgba(23, 33, 59, 0.15);
+
+    border-radius: 24px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 18px;
+}
+
+
+.task-form-controls {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   CREATE TASK INPUT
+========================================= */
+
+.task-form input {
+
+    flex: 1;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border: 1px solid rgba(23, 33, 59, 0.12);
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.task-form input:focus {
+
+    border-color: var(--coral);
+}
+
+
+/* =========================================
+   CREATE TASK SELECT
+========================================= */
+
+.task-form select {
+
+    width: 220px;
+
+    height: 52px;
+
+    padding: 0 16px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border: 1px solid rgba(23, 33, 59, 0.12);
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   GENERAL BUTTON
+========================================= */
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: 0.2s;
+}
+
+
+/* =========================================
+   ADD TASK
+========================================= */
+
+#addTaskBtn {
+
+    height: 52px;
+
+    padding: 0 22px;
+
+    background: var(--coral);
+
+    color: var(--navy);
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+#addTaskBtn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SEARCH + FILTER SECTION
+========================================= */
+
+.bonus-controls {
+
+    background: white;
+
+    border: 1px solid rgba(23, 33, 59, 0.15);
+
+    border-radius: 24px;
+
+    padding: 24px 32px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   SEARCH CONTROLS
+========================================= */
+
+.search-controls {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 16px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   SEARCH INPUT
+========================================= */
+
+#searchInput {
+
+    flex: 1;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border: 1px solid rgba(23, 33, 59, 0.12);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+#searchInput:focus {
+
+    border-color: var(--coral);
+}
+
+
+/* =========================================
+   CATEGORY FILTER
+========================================= */
+
+#categoryFilter {
+
+    width: 220px;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border: 1px solid rgba(23, 33, 59, 0.12);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CLEAR ALL
+========================================= */
+
+#clearAllBtn {
+
+    height: 50px;
+
+    padding: 0 18px;
+
+    background: var(--coral);
+
+    color: var(--navy);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+#clearAllBtn:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TASK SECTION
+========================================= */
+
+.tasks-section {
+
+    background: white;
+
+    border: 1px solid rgba(23, 33, 59, 0.15);
+
+    border-radius: 24px;
+
+    padding: 30px 32px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   TASK HEADING
+========================================= */
+
+.tasks-heading {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.tasks-heading h2 {
+
+    margin: 0;
+}
+
+
+/* =========================================
+   TASK STATISTICS
+========================================= */
+
+.task-stats {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-card {
+
+    flex: 1;
+
+    min-height: 72px;
+
+    padding: 12px 18px;
+
+    background: var(--cream);
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.stat-card h3 {
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    margin-bottom: 4px;
+}
+
+
+.stat-card p {
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   TASK CONTAINER
+========================================= */
+
+#taskContainer {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   TASK CARD
+========================================= */
+
+.task-card {
+
+    background: var(--cream);
+
+    border: 1px solid rgba(23, 33, 59, 0.08);
+
+    padding: 18px;
+
+    min-height: 145px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.task-card h3 {
+
+    font-size: 15px;
+
+    line-height: 1.3;
+}
+
+
+.task-card p {
+
+    font-size: 12px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   TASK ACTIONS
+========================================= */
+
+.task-actions {
+
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: auto;
+}
+
+
+.task-actions button {
+
+    padding: 7px 10px;
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.task-actions button:hover {
+
+    background: var(--coral);
+
+    color: var(--navy);
+}
+
+
+/* =========================================
+   COMPLETED TASK
+========================================= */
+
+.completed {
+
+    opacity: 0.6;
+}
+
+
+.completed h3 {
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================
+   EDIT INPUT
+========================================= */
+
+.task-card input {
+
+    width: 100%;
+
+    padding: 9px 10px;
+
+    border: 1px solid var(--navy);
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: var(--navy);
+
+    outline: none;
+}
+
+
+.save-btn {
+
+    margin-top: 5px;
+
+    padding: 7px 12px;
+
+    background: var(--coral);
+
+    color: var(--navy);
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ATTRIBUTES VS PROPERTIES
+========================================= */
+
+.attribute-demo {
+
+    background: var(--cream);
+
+    border: 1px solid rgba(23, 33, 59, 0.15);
+
+    border-radius: 24px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.attribute-demo h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+.attribute-demo p {
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+#demoInput {
+
+    width: 300px;
+
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--navy);
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: var(--navy);
+
+    outline: none;
+}
+
+
+/* =========================================
+   EVENT PROPAGATION
+========================================= */
+
+.event-section {
+
+    background: var(--coral);
+
+    border-radius: 24px;
+
+    padding: 34px 32px;
+
+    margin-bottom: 18px;
+
+    color: var(--navy);
+}
+
+
+.event-section > h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 4px;
+}
+
+
+.section-description {
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   EVENT DEMO
+========================================= */
+
+.event-demo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+
+.grandparent {
+
+    width: 720px;
+
+    padding: 20px;
+
+    background: var(--navy);
+
+    border-radius: 18px;
+
+    color: white;
+}
+
+
+.grandparent > p {
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.parent {
+
+    padding: 18px 20px;
+
+    background: rgba(255, 248, 236, 0.18);
+
+    border-radius: 14px;
+}
+
+
+.parent > p {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   EVENT BUTTONS
+========================================= */
+
+.event-buttons {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.event-buttons button {
+
+    padding: 10px 16px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.event-buttons button:hover {
+
+    background: var(--coral);
+}
+
+
+/* =========================================
+   EVENT RESULTS
+========================================= */
+
+.event-results {
+
+    display: flex;
+
+    gap: 18px;
+}
+
+
+.event-results > div {
+
+    flex: 1;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    padding: 18px;
+
+    border-radius: 14px;
+}
+
+
+.event-results h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 6px;
+}
+
+
+.event-results p {
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BROWSER RENDERING PIPELINE
+========================================= */
+
+.rendering-section {
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 24px;
+
+    padding: 40px 32px;
+
+    text-align: center;
+}
+
+
+.rendering-section h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.rendering-description {
+
+    font-size: 14px;
+
+    opacity: 0.75;
+
+    margin-bottom: 32px;
+}
+
+
+/* =========================================
+   PIPELINE
+========================================= */
+
+.pipeline {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.pipeline-box {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    padding: 18px 20px;
+
+    background: var(--cream);
+
+    color: var(--navy);
+
+    border-radius: 12px;
+
+    border: 2px solid transparent;
+}
+
+
+.pipeline-box h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.pipeline-box p {
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   RENDER TREE HIGHLIGHT
+========================================= */
+
+.pipeline-box.highlight {
+
+    background: var(--coral);
+
+    border-color: var(--coral);
+}
+
+
+/* =========================================
+   PIPELINE ARROWS
+========================================= */
+
+.arrow {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: var(--coral);
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark {
+
+    background: #17213b;
+
+    color: var(--cream);
+}
+
+
+body.dark .hero p {
+
+    color: var(--cream);
+
+    opacity: 0.7;
+}
+
+
+body.dark .task-form,
+body.dark .bonus-controls,
+body.dark .tasks-section {
+
+    background: #17213b;
+
+    border-color: rgba(255, 248, 236, 0.15);
+}
+
+
+body.dark .task-form input,
+body.dark .task-form select,
+body.dark #searchInput,
+body.dark #categoryFilter {
+
+    background: var(--cream);
+
+    color: var(--navy);
+}
+
+
+body.dark .stat-card {
+
+    background: rgba(255, 248, 236, 0.1);
+
+    color: var(--cream);
+}
+
+
+body.dark .task-card {
+
+    background: rgba(255, 248, 236, 0.1);
+
+    color: var(--cream);
+
+    border-color: rgba(255, 248, 236, 0.1);
+}
+
+
+body.dark .task-card p {
+
+    color: var(--cream);
+}
+
+
+body.dark .attribute-demo {
+
+    background: #17213b;
+
+    border-color: rgba(255, 248, 236, 0.15);
+}
+
+
+body.dark .attribute-demo p {
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    main {
+
+        width: 92%;
+    }
+
+
+    header {
+
+        padding: 22px 4%;
+    }
+
+
+    .brand h1 {
+
+        font-size: 27px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 36px;
+    }
+
+
+    .task-form-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .task-form select {
+
+        width: 100%;
+    }
+
+
+    #addTaskBtn {
+
+        width: 100%;
+    }
+
+
+    .search-controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #categoryFilter {
+
+        width: 100%;
+    }
+
+
+    #clearAllBtn {
+
+        width: 100%;
+    }
+
+
+    #taskContainer {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .attribute-demo {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    #demoInput {
+
+        width: 100%;
+    }
+
+
+    .grandparent {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    #themeBtn {
+
+        align-self: flex-start;
+    }
+
+
+    .hero {
+
+        padding: 40px 0;
+    }
+
+
+    .hero h2 {
+
+        font-size: 30px;
+    }
+
+
+    .task-form,
+    .bonus-controls,
+    .tasks-section,
+    .attribute-demo,
+    .event-section,
+    .rendering-section {
+
+        padding: 24px 20px;
+
+        border-radius: 18px;
+    }
+
+
+    .task-stats {
+
+        flex-direction: column;
+    }
+
+
+    .event-results {
+
+        flex-direction: column;
+    }
+
+
+    .event-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .event-buttons button {
+
+        width: 100%;
+    }
+
+}
