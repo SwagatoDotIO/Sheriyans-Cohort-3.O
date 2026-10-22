@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10104b" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="dark-theme">
+    <header class="app-header">
+      <div class="brand">
+        <h1>Productivity Dashboard</h1>
+        <p>Your personal productivity workspace</p>
+      </div>
+      <button type="button" id="themeToggle" aria-pressed="true">
+        ☀️ Light Mode
+      </button>
+    </header>
+
+    <main id="app">
+      <section id="dashboardView">
+        <div class="dashboard-heading">
+          <div>
+            <p class="eyebrow">YOUR COMMAND CENTER</p>
+            <h2>Dashboard</h2>
+            <p>Your journey to excellence starts here.</p>
+          </div>
+          <div class="heading-orb" aria-hidden="true">✦</div>
+        </div>
+
+        <div class="datetime-widget">
+          <div>
+            <p class="widget-label">TODAY</p>
+            <p id="currentDate">Loading date...</p>
+          </div>
+          <div class="clock-block">
+            <p class="widget-label">CURRENT TIME</p>
+            <h2 id="currentTime">00:00:00</h2>
+          </div>
+          <p class="datetime-message">✦ Make today productive.</p>
+        </div>
+
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <button type="button" class="nav-item active" data-home="true">
+            ▦ Dashboard
+          </button>
+          <button type="button" class="nav-item" data-feature="pomodoroView">
+            ◷ Timer
+          </button>
+          <button type="button" class="nav-item" data-feature="goalsView">
+            ⌁ Goals
+          </button>
+          <button type="button" class="nav-item" data-feature="plannerView">
+            ◈ Planner
+          </button>
+          <button type="button" class="nav-item" data-feature="quoteView">
+            ✦ Quotes
+          </button>
+          <button type="button" class="nav-item" data-feature="todoView">
+            ▢ Todo List
+          </button>
+          <button type="button" class="nav-item" data-feature="weatherView">
+            ☀ Weather
+          </button>
+        </nav>
+
+        <section class="dashboard-panel dashboard-quote">
+          <div class="panel-topline">
+            <span class="section-kicker">DAILY MOTIVATION</span>
+            <span class="quote-sparkle" aria-hidden="true">✧</span>
+          </div>
+
+          <div class="quote-heading">
+            <span class="dashboard-quote-icon" aria-hidden="true">❝</span>
+            <div class="quote-copy">
+              <p id="dashboardQuoteText">
+                Great things are done by a series of small things brought
+                together.
+              </p>
+              <p id="dashboardQuoteAuthor">— Vincent van Gogh</p>
+            </div>
+          </div>
+
+          <p
+            id="dashboardQuoteStatus"
+            class="status-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <div class="quote-actions">
+            <span class="quote-caption"
+              >A little inspiration for your journey</span
+            >
+            <button
+              type="button"
+              id="dashboardNewQuoteBtn"
+              class="subtle-button"
+            >
+              ↻ Get a New Quote
+            </button>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Productivity statistics">
+          <article class="stat-card stat-streak">
+            <div class="stat-top">
+              <span>Current Streak</span><span aria-hidden="true">🔥</span>
+            </div>
+            <strong id="streakValue">1 day</strong>
+            <small>Keep it going!</small>
+            <span class="stat-decoration" aria-hidden="true"></span>
+          </article>
+
+          <article class="stat-card stat-focus">
+            <div class="stat-top">
+              <span>Focus Hours</span><span aria-hidden="true">◉</span>
+            </div>
+            <strong id="focusHours">0h</strong>
+            <small>Deep work time</small>
+            <span class="stat-decoration" aria-hidden="true"></span>
+          </article>
+
+          <article class="stat-card stat-tasks">
+            <div class="stat-top">
+              <span>Tasks Completed</span><span aria-hidden="true">⌁</span>
+            </div>
+            <strong id="dashboardTasksCompleted">0</strong>
+            <small>Actions taken</small>
+            <span class="stat-decoration" aria-hidden="true"></span>
+          </article>
+
+          <article class="stat-card stat-productivity">
+            <div class="stat-top">
+              <span>Productivity</span><span aria-hidden="true">♧</span>
+            </div>
+            <strong id="dashboardProductivity">0%</strong>
+            <small>Overall score</small>
+            <span class="stat-decoration" aria-hidden="true"></span>
+          </article>
+        </section>
+
+        <section class="dashboard-panel pillars-panel">
+          <div class="section-heading">
+            <div class="section-icon">🎯</div>
+            <div>
+              <h3>Life Pillars Progress</h3>
+              <p class="panel-subtitle">Your foundations for success</p>
+            </div>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span>Trading</span><strong id="tradingPercent">0%</strong>
+            </div>
+            <div class="pillar-track"><div id="tradingProgress"></div></div>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span>Fitness</span><strong id="fitnessPercent">0%</strong>
+            </div>
+            <div class="pillar-track"><div id="fitnessProgress"></div></div>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span>Personal Development</span
+              ><strong id="developmentPercent">0%</strong>
+            </div>
+            <div class="pillar-track"><div id="developmentProgress"></div></div>
+          </div>
+
+          <div class="pillar">
+            <div><span>Health</span><strong id="healthPercent">0%</strong></div>
+            <div class="pillar-track"><div id="healthProgress"></div></div>
+          </div>
+
+          <div class="pillar">
+            <div>
+              <span>Productivity</span
+              ><strong id="productivityPercent">0%</strong>
+            </div>
+            <div class="pillar-track">
+              <div id="productivityProgress"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dashboard-panel insights-panel">
+          <div class="section-heading">
+            <div class="section-icon">💡</div>
+            <div>
+              <h3>Today's Insights</h3>
+              <p class="panel-subtitle">A few reminders for your day</p>
+            </div>
+          </div>
+          <p>💪 Build your streak! Consistency is the key to mastery.</p>
+          <p>🎯 Remember: Small daily wins compound into massive results.</p>
+          <p id="dashboardWeatherInsight">
+            🌤️ Check the weather before planning your day.
+          </p>
+        </section>
+
+        <section class="tools-section">
+          <div class="tools-heading">
+            <div>
+              <p class="eyebrow">YOUR WORKSPACE</p>
+              <h2>Your Productivity Tools</h2>
+              <p>Choose a tool to get started.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <button type="button" class="feature-card" data-feature="todoView">
+              <span class="tool-icon icon-purple">✓</span>
+              <span>Todo List</span>
+              <small>Organize your tasks</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <button
+              type="button"
+              class="feature-card"
+              data-feature="plannerView"
+            >
+              <span class="tool-icon icon-blue">▦</span>
+              <span>Daily Planner</span>
+              <small>Plan your day</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <button type="button" class="feature-card" data-feature="goalsView">
+              <span class="tool-icon icon-pink">◎</span>
+              <span>Daily Goals</span>
+              <small>Track your progress</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <button
+              type="button"
+              class="feature-card"
+              data-feature="pomodoroView"
+            >
+              <span class="tool-icon icon-cyan">◷</span>
+              <span>Pomodoro Timer</span>
+              <small>Focus on your work</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <button type="button" class="feature-card" data-feature="quoteView">
+              <span class="tool-icon icon-violet">✦</span>
+              <span>Motivation Quotes</span>
+              <small>Find your inspiration</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <button
+              type="button"
+              class="feature-card"
+              data-feature="weatherView"
+            >
+              <span class="tool-icon icon-orange">☀</span>
+              <span>Weather</span>
+              <small>Check local conditions</small>
+              <span class="tool-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section id="todoView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+        <div class="todo-header">
+          <p class="eyebrow">STAY ORGANIZED</p>
+          <h2>Todo List</h2>
+          <p>Organize your tasks and get things done.</p>
+        </div>
+
+        <form id="todoForm" class="todo-form">
+          <input
+            type="text"
+            id="todoInput"
+            placeholder="What do you need to do?"
+            maxlength="200"
+            required
+          />
+          <button type="submit" id="addTodoBtn">+ Add Task</button>
+        </form>
+
+        <p id="todoMessage" class="form-message" aria-live="polite"></p>
+
+        <div class="todo-summary">
+          <span id="todoTotal">Total: 0</span>
+          <span id="todoCompleted">Completed: 0</span>
+          <span id="todoPending">Pending: 0</span>
+        </div>
+
+        <ul id="todoList" class="todo-list"></ul>
+        <p id="emptyTodoMessage" class="empty-message">
+          No tasks yet. Add your first task above!
+        </p>
+      </section>
+
+      <section id="plannerView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+        <div class="planner-header">
+          <p class="eyebrow">MAKE EVERY HOUR COUNT</p>
+          <h2>Daily Planner</h2>
+          <p>Plan your day, one hour at a time.</p>
+          <p id="plannerDate"></p>
+        </div>
+
+        <div class="planner-info">
+          <span>24-hour daily schedule</span>
+          <span id="plannerSavedStatus" role="status" aria-live="polite">
+            Your plans are saved automatically.
+          </span>
+        </div>
+
+        <div id="plannerSlots" class="planner-slots"></div>
+      </section>
+
+      <section id="goalsView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+        <div class="goals-header">
+          <p class="eyebrow">SMALL STEPS, BIG RESULTS</p>
+          <h2>Daily Goals</h2>
+          <p>Set your intentions and track your daily progress.</p>
+        </div>
+
+        <div class="goals-progress-card">
+          <div class="goals-progress-info">
+            <span>Today's Progress</span>
+            <strong id="goalProgress">0 of 0 completed</strong>
+          </div>
+          <div
+            id="goalProgressBar"
+            class="goal-progress-bar"
+            role="progressbar"
+            aria-label="Daily goals completed"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div id="goalProgressFill" class="goal-progress-fill"></div>
+          </div>
+          <p id="goalProgressMessage">Start with one small goal.</p>
+        </div>
+
+        <form id="goalForm" class="goal-form">
+          <input
+            type="text"
+            id="goalInput"
+            placeholder="What do you want to achieve today?"
+            maxlength="200"
+            required
+          />
+          <button type="submit">+ Add Goal</button>
+        </form>
+        <p id="goalMessage" class="form-message" aria-live="polite"></p>
+
+        <div class="goal-filters">
+          <button
+            type="button"
+            class="goal-filter active"
+            data-goal-filter="all"
+          >
+            All Goals
+          </button>
+          <button type="button" class="goal-filter" data-goal-filter="pending">
+            Pending
+          </button>
+          <button
+            type="button"
+            class="goal-filter"
+            data-goal-filter="completed"
+          >
+            Completed
+          </button>
+        </div>
+
+        <ul id="goalList" class="goal-list"></ul>
+        <p id="emptyGoalMessage" class="empty-message">
+          No goals yet. Add your first goal above!
+        </p>
+      </section>
+
+      <section id="pomodoroView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+
+        <div class="pomodoro-header">
+          <p class="eyebrow">FOCUS MODE</p>
+          <h2>Pomodoro Focus Timer</h2>
+          <p>Focus on one task at a time. Take breaks when you need them.</p>
+        </div>
+
+        <div class="pomodoro-card">
+          <!-- Select timer session -->
+          <div
+            class="pomodoro-session-options"
+            aria-label="Choose timer session"
+          >
+            <button
+              type="button"
+              class="pomodoro-mode active"
+              data-pomodoro-mode="work"
+              aria-pressed="true"
+            >
+              Work
+              <span>25 min</span>
+            </button>
+
+            <button
+              type="button"
+              class="pomodoro-mode"
+              data-pomodoro-mode="short"
+              aria-pressed="false"
+            >
+              Short Break
+              <span>5 min</span>
+            </button>
+
+            <button
+              type="button"
+              class="pomodoro-mode"
+              data-pomodoro-mode="long"
+              aria-pressed="false"
+            >
+              Long Break
+              <span>15 min</span>
+            </button>
+          </div>
+
+          <div class="timer-ring">
+            <p id="pomodoroSession" class="pomodoro-session">Work Session</p>
+
+            <div
+              id="pomodoroDisplay"
+              class="pomodoro-display"
+              role="timer"
+              aria-live="off"
+            >
+              25:00
+            </div>
+
+            <p id="pomodoroStatus" aria-live="polite">Ready when you are.</p>
+          </div>
+
+          <div class="pomodoro-controls">
+            <button type="button" id="pomodoroStart">▶ Start</button>
+            <button type="button" id="pomodoroPause">Ⅱ Pause</button>
+            <button type="button" id="pomodoroReset">↻ Reset</button>
+          </div>
+        </div>
+
+        <div class="pomodoro-info">
+          <h3>How it works</h3>
+          <p>1. Focus for 25 minutes during a work session.</p>
+          <p>2. Choose a 5-minute short break to recharge.</p>
+          <p>3. Choose a 15-minute long break when you need more rest.</p>
+          <p>4. Use Start, Pause, and Reset to control the selected timer.</p>
+          <p>5. When a session ends, you'll receive a notification.</p>
+        </div>
+      </section>
+
+      <section id="quoteView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+        <div class="quote-header">
+          <p class="eyebrow">A MOMENT OF INSPIRATION</p>
+          <h2>Daily Motivation</h2>
+          <p>A little inspiration can change your entire day.</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-icon" aria-hidden="true">“</div>
+          <p id="quoteText" aria-live="polite">
+            Your next dose of inspiration is waiting.
+          </p>
+          <p id="quoteAuthor">— Your Daily Motivation</p>
+          <p
+            id="quoteStatus"
+            class="status-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <button type="button" id="newQuoteBtn">↻ Get a New Quote</button>
+        </div>
+      </section>
+
+      <section id="weatherView" class="feature-view hidden">
+        <button type="button" class="back-button">← Back to Dashboard</button>
+
+        <div class="weather-header">
+          <p class="eyebrow">OUTSIDE YOUR WORKSPACE</p>
+          <h2>Weather</h2>
+          <p>Check your local weather or search for any location.</p>
+        </div>
+
+        <!-- Search for another city -->
+        <div class="weather-search-panel">
+          <form id="weatherSearchForm" class="weather-search-form">
+            <label class="sr-only" for="weatherSearchInput">
+              Search for a city or town
+            </label>
+
+            <input
+              type="search"
+              id="weatherSearchInput"
+              placeholder="Search city or town (e.g. Kolkata, London)"
+              autocomplete="off"
+              maxlength="120"
+              required
+            />
+
+            <button type="submit" id="weatherSearchBtn">Search</button>
+          </form>
+
+          <div class="weather-location-actions">
+            <button
+              type="button"
+              id="useMyLocationBtn"
+              class="secondary-button"
+            >
+              ◎ Use My Location
+            </button>
+
+            <span id="weatherSearchHint">
+              Search any city or allow location access to find your weather.
+            </span>
+          </div>
+
+          <ul
+            id="weatherSearchResults"
+            class="weather-search-results hidden"
+            aria-label="Location search results"
+          ></ul>
+        </div>
+
+        <!-- Current weather -->
+        <div class="weather-card">
+          <p class="weather-location-label">WEATHER FOR</p>
+          <h3 id="weatherLocation">Detecting your location...</h3>
+
+          <div class="weather-main">
+            <span id="weatherIcon" aria-hidden="true">🌤️</span>
+            <p id="weatherTemperature">--°C</p>
+          </div>
+
+          <p id="weatherCondition">Loading weather...</p>
+
+          <div class="weather-details">
+            <div class="weather-detail">
+              <span>Humidity</span>
+              <strong id="weatherHumidity">--%</strong>
+            </div>
+
+            <div class="weather-detail">
+              <span>Wind Speed</span>
+              <strong id="weatherWind">-- km/h</strong>
+            </div>
+          </div>
+
+          <p id="weatherUpdated" class="weather-updated"></p>
+
+          <p
+            id="weatherStatus"
+            class="status-message"
+            role="status"
+            aria-live="polite"
+          >
+            Getting current weather...
+          </p>
+
+          <div class="weather-card-actions">
+            <button type="button" id="refreshWeatherBtn">
+              ↻ Refresh Weather
+            </button>
+
+            <button
+              type="button"
+              id="weatherBackToDetectedBtn"
+              class="secondary-button"
+            >
+              Return to My Weather
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
